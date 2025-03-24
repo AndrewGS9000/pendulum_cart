@@ -11,6 +11,7 @@ Depending on the controller and computer used, the file may take a moment to run
 Requirements:
 - python 3.11.10
 - Visual Studio Code (or another IDE for python)
+
 libraries:
 - numpy v1.26.4
 - matplotlib v3.9.1
