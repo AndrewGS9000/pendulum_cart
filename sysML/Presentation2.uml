@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+  <uml:Model xmi:id="_hQ-6QN_lEe-4v4qBOQC9Zw" name="Presentation2">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_hfpoYN_lEe-4v4qBOQC9Zw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_hgdgsN_lEe-4v4qBOQC9Zw">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_1MK5QOCIEe-4v4qBOQC9Zw" name="requirements">
+      <packagedElement xmi:type="uml:Class" xmi:id="_ODBeEOCJEe-4v4qBOQC9Zw" name="REQ-000 Function Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_U6ZJEOCKEe-4v4qBOQC9Zw" name="REQ-001 &#x9;Maintain Balance"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_bg3GwOCKEe-4v4qBOQC9Zw" name="REQ-002 External Disturbance Handling"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_izYSIOCKEe-4v4qBOQC9Zw" name="REQ-010 Performance Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_wMzxYOCKEe-4v4qBOQC9Zw" name="REQ-012 Steady-State Accuracy"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_oIdgcOCKEe-4v4qBOQC9Zw" name="REQ-011 Settling Time"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QhyUoOCLEe-4v4qBOQC9Zw" name="REQ-030 Safety &amp; Reliability Requirement">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_BHAWwOCNEe-4v4qBOQC9Zw" name="REQ-031 Emergency Stop"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_RIpRkOCREe-4v4qBOQC9Zw" name="REQ-032 Safe Speed Limits"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Nj4HIOCNEe-4v4qBOQC9Zw" name="REQ-020 Non-Functional Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_I8JY8OCLEe-4v4qBOQC9Zw" name="REQ-020 Kit Constraint"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ppUyEOCREe-4v4qBOQC9Zw" name="REQ-040 Structural Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_xpYY4OCREe-4v4qBOQC9Zw" name="REQ-041 Cart Design"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_FOR74OCSEe-4v4qBOQC9Zw" name="REQ-042 Sensor Mounting"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_YTAxEOCSEe-4v4qBOQC9Zw" name="REQ-050 Behavioral Requirements">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_eHcN0OCSEe-4v4qBOQC9Zw" name="REQ-051 Automatic Shut down"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Activity" xmi:id="_Z8jrUOCeEe-4v4qBOQC9Zw" name="Activity" node="_bnXnUOCeEe-4v4qBOQC9Zw _d4U9UOCeEe-4v4qBOQC9Zw _9wo9QOCfEe-4v4qBOQC9Zw" group="_9wo9QOCfEe-4v4qBOQC9Zw">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_ouuF0OCjEe-4v4qBOQC9Zw" name=">45 degrees" target="_d4U9UOCeEe-4v4qBOQC9Zw" source="_HvQ_AOCfEe-4v4qBOQC9Zw"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_39qVMOCjEe-4v4qBOQC9Zw" name="&lt;45 degrees" target="_HPFl8OCmEe-4v4qBOQC9Zw" source="_HvQ_AOCfEe-4v4qBOQC9Zw"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_Pm7aoOCmEe-4v4qBOQC9Zw" name="Exceed limit" target="_d4U9UOCeEe-4v4qBOQC9Zw" source="_HPFl8OCmEe-4v4qBOQC9Zw"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_Apl3oOCxEe-4v4qBOQC9Zw" target="_9wo9QOCfEe-4v4qBOQC9Zw" source="_bnXnUOCeEe-4v4qBOQC9Zw"/>
+      <structuredNode xmi:type="uml:LoopNode" xmi:id="_9wo9QOCfEe-4v4qBOQC9Zw" name="Check speed limit" incoming="_Apl3oOCxEe-4v4qBOQC9Zw">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_XS22cOCkEe-4v4qBOQC9Zw" target="_SiZNkOCjEe-4v4qBOQC9Zw" source="_Ln9yEOCjEe-4v4qBOQC9Zw"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_YK4DkOCkEe-4v4qBOQC9Zw" target="_tS7DEOCeEe-4v4qBOQC9Zw" source="_SiZNkOCjEe-4v4qBOQC9Zw"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_mPRLYOCkEe-4v4qBOQC9Zw" target="_HvQ_AOCfEe-4v4qBOQC9Zw" source="_tS7DEOCeEe-4v4qBOQC9Zw"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_J6h4gOCmEe-4v4qBOQC9Zw" name="Within limit" target="_Ln9yEOCjEe-4v4qBOQC9Zw" source="_HPFl8OCmEe-4v4qBOQC9Zw"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_tS7DEOCeEe-4v4qBOQC9Zw" name="Move cart" incoming="_YK4DkOCkEe-4v4qBOQC9Zw" outgoing="_mPRLYOCkEe-4v4qBOQC9Zw"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_Ln9yEOCjEe-4v4qBOQC9Zw" name="Read sensor data" incoming="_J6h4gOCmEe-4v4qBOQC9Zw" outgoing="_XS22cOCkEe-4v4qBOQC9Zw"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_SiZNkOCjEe-4v4qBOQC9Zw" name="Compute Control" incoming="_XS22cOCkEe-4v4qBOQC9Zw" outgoing="_YK4DkOCkEe-4v4qBOQC9Zw"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_HvQ_AOCfEe-4v4qBOQC9Zw" name="Check Angle" incoming="_mPRLYOCkEe-4v4qBOQC9Zw" outgoing="_ouuF0OCjEe-4v4qBOQC9Zw _39qVMOCjEe-4v4qBOQC9Zw"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_HPFl8OCmEe-4v4qBOQC9Zw" name="Check Speed Limit" incoming="_39qVMOCjEe-4v4qBOQC9Zw" outgoing="_J6h4gOCmEe-4v4qBOQC9Zw _Pm7aoOCmEe-4v4qBOQC9Zw"/>
+      </structuredNode>
+      <node xmi:type="uml:InitialNode" xmi:id="_bnXnUOCeEe-4v4qBOQC9Zw" name="Start" outgoing="_Apl3oOCxEe-4v4qBOQC9Zw"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_d4U9UOCeEe-4v4qBOQC9Zw" name="End" incoming="_ouuF0OCjEe-4v4qBOQC9Zw _Pm7aoOCmEe-4v4qBOQC9Zw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hXPTQN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hXWoAN_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfRN4N_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfScAN_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfdbIN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfdbId_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfeCMN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfepQN_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfepQd_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfepQt_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hff3YN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfgecN_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfhskN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfhskd_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfi6sN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfi6sd_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfkI0N_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfkv4N_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hfl-AN_lEe-4v4qBOQC9Zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hfnMIN_lEe-4v4qBOQC9Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_OFJlAOCJEe-4v4qBOQC9Zw" base_NamedElement="_ODBeEOCJEe-4v4qBOQC9Zw" id="REQ-000" text="&#xD;&#xA;" base_Class="_ODBeEOCJEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_U6fPsOCKEe-4v4qBOQC9Zw" base_NamedElement="_U6ZJEOCKEe-4v4qBOQC9Zw" id="REQ-001" text="The system must stabilize the pendulum in an upright position." base_Class="_U6ZJEOCKEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_bg6xIOCKEe-4v4qBOQC9Zw" base_NamedElement="_bg3GwOCKEe-4v4qBOQC9Zw" id="REQ-002" text="The system must reject external forces applied to the cart." base_Class="_bg3GwOCKEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_izdKoOCKEe-4v4qBOQC9Zw" base_NamedElement="_izYSIOCKEe-4v4qBOQC9Zw" id="REQ-010" base_Class="_izYSIOCKEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_oIiY8OCKEe-4v4qBOQC9Zw" base_NamedElement="_oIdgcOCKEe-4v4qBOQC9Zw" id="REQ-011" text="The system must stabilize the pendulum within 2 seconds after a disturbance." base_Class="_oIdgcOCKEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_wM20sOCKEe-4v4qBOQC9Zw" base_NamedElement="_wMzxYOCKEe-4v4qBOQC9Zw" id="REQ-012" text="The pendulum angle deviation must be less than 0.5 degrees after settling." base_Class="_wMzxYOCKEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_I8McQOCLEe-4v4qBOQC9Zw" base_NamedElement="_I8JY8OCLEe-4v4qBOQC9Zw" id="REQ-021" text="The system must use an ELEGOO kit." base_Class="_I8JY8OCLEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_Qh1_AOCLEe-4v4qBOQC9Zw" base_NamedElement="_QhyUoOCLEe-4v4qBOQC9Zw" id="REQ-030" base_Class="_QhyUoOCLEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_BHFPQOCNEe-4v4qBOQC9Zw" base_NamedElement="_BHAWwOCNEe-4v4qBOQC9Zw" id="REQ-031" text="The system must have a stop mechanism to prevent damage if instability is detected." base_Class="_BHAWwOCNEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_Nj7xgOCNEe-4v4qBOQC9Zw" base_NamedElement="_Nj4HIOCNEe-4v4qBOQC9Zw" id="REQ-020" base_Class="_Nj4HIOCNEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_RItjAOCREe-4v4qBOQC9Zw" base_NamedElement="_RIpRkOCREe-4v4qBOQC9Zw" id="REQ-032" text="The cart should not exceed a speed of 10 m/s to prevent damage." base_Class="_RIpRkOCREe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_ppaRoOCREe-4v4qBOQC9Zw" base_NamedElement="_ppUyEOCREe-4v4qBOQC9Zw" id="REQ-040" base_Class="_ppUyEOCREe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_xpdRYOCREe-4v4qBOQC9Zw" base_NamedElement="_xpYY4OCREe-4v4qBOQC9Zw" id="REQ-041" text="The cart must be lightweight and solid." base_Class="_xpYY4OCREe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_FOWNUOCSEe-4v4qBOQC9Zw" base_NamedElement="_FOR74OCSEe-4v4qBOQC9Zw" id="REQ-042" text="The sensors must be securely mounted to minimize vibration." base_Class="_FOR74OCSEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_YTFpkOCSEe-4v4qBOQC9Zw" base_NamedElement="_YTAxEOCSEe-4v4qBOQC9Zw" id="REQ-050" base_Class="_YTAxEOCSEe-4v4qBOQC9Zw"/>
+  <Requirements:Requirement xmi:id="_eHfRIOCSEe-4v4qBOQC9Zw" base_NamedElement="_eHcN0OCSEe-4v4qBOQC9Zw" id="REQ-051" text="The cart should automatically shut down when safety limit is reached." base_Class="_eHcN0OCSEe-4v4qBOQC9Zw"/>
+</xmi:XMI>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+  <uml:Model xmi:id="_hIA_wN1ZEe-ijvR8GGXNUw" name="sys_eng_project1">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_hQAeMN1ZEe-ijvR8GGXNUw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_hQls8N1ZEe-ijvR8GGXNUw">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_idxm0N4fEe-_4MBFLfToQQ" name="useCaseDiagram">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_nmksoN4fEe-_4MBFLfToQQ" name="Operator"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_DwXo4N4gEe-_4MBFLfToQQ"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_QWA6wN4gEe-_4MBFLfToQQ" name="TAs or professor"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dVuScN4gEe-_4MBFLfToQQ"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5-gQwN4gEe-_4MBFLfToQQ"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_7JoAEN4gEe-_4MBFLfToQQ"/>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_nXZEUN4jEe-_4MBFLfToQQ" name="Cart Pendulum System" useCase="_OTtH8N4kEe-_4MBFLfToQQ">
+        <ownedUseCase xmi:type="uml:UseCase" xmi:id="_aiofwN4gEe-_4MBFLfToQQ" name="Disturbance"/>
+        <ownedUseCase xmi:type="uml:UseCase" xmi:id="_h-Qj0N4gEe-_4MBFLfToQQ" name="Start"/>
+        <ownedUseCase xmi:type="uml:UseCase" xmi:id="_6yzQ8N4fEe-_4MBFLfToQQ" name="Shutdown"/>
+        <ownedUseCase xmi:type="uml:UseCase" xmi:id="_OTtH8N4kEe-_4MBFLfToQQ" name="automatic shutdown" subject="_nXZEUN4jEe-_4MBFLfToQQ">
+          <generalization xmi:type="uml:Generalization" xmi:id="_s8pREOCeEe-faP8EmgmOxg" general="_6yzQ8N4fEe-_4MBFLfToQQ"/>
+        </ownedUseCase>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VwKAgN4mEe-_4MBFLfToQQ" name="state_machine">
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_YxtF8N4mEe-_4MBFLfToQQ" name="On">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_VxEfIN4pEe-_4MBFLfToQQ" kind="entryPoint"/>
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_WE9EcN4pEe-_4MBFLfToQQ" kind="exitPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_Za5M4N4mEe-_4MBFLfToQQ" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_ihjvEN4pEe-_4MBFLfToQQ" name="Shutdown" source="_VxEfIN4pEe-_4MBFLfToQQ" target="_Y8LwQN4pEe-_4MBFLfToQQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_mXqd8N4pEe-_4MBFLfToQQ" name="Start" source="_TxQjgN4pEe-_4MBFLfToQQ" target="_WE9EcN4pEe-_4MBFLfToQQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_Xsl7MN4qEe-_4MBFLfToQQ" guard="_9T0dYOCqEe-faP8EmgmOxg" source="_XhPuMN4nEe-_4MBFLfToQQ" target="_FzZFAN4qEe-_4MBFLfToQQ">
+            <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_9T0dYOCqEe-faP8EmgmOxg" name="Unstability">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_9T0dYeCqEe-faP8EmgmOxg">
+                <language>python</language>
+                <body>abs(angle) > threshold</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_KnU60OCrEe-faP8EmgmOxg" guard="_RhTDUOCrEe-faP8EmgmOxg" source="_FzZFAN4qEe-_4MBFLfToQQ" target="_XhPuMN4nEe-_4MBFLfToQQ">
+            <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_RhTDUOCrEe-faP8EmgmOxg">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_RhTDUeCrEe-faP8EmgmOxg">
+                <language>python</language>
+                <body>abs(angle) &lt; threshold</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_Y7rKMOCrEe-faP8EmgmOxg" source="_VXyuYN4nEe-_4MBFLfToQQ" target="_XhPuMN4nEe-_4MBFLfToQQ"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_VXyuYN4nEe-_4MBFLfToQQ" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XhPuMN4nEe-_4MBFLfToQQ" name="Stable"/>
+          <subvertex xmi:type="uml:State" xmi:id="_FzZFAN4qEe-_4MBFLfToQQ" name="Unstable"/>
+        </region>
+      </packagedElement>
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_2FuZoN4mEe-_4MBFLfToQQ" name="Off">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_TxQjgN4pEe-_4MBFLfToQQ" name="" kind="entryPoint"/>
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_Y8LwQN4pEe-_4MBFLfToQQ" kind="exitPoint"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_AvuV0OCmEe-faP8EmgmOxg" name="state_machine">
+        <packagedElement xmi:type="uml:StateMachine" xmi:id="_AvuV0eCmEe-faP8EmgmOxg" name="On">
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_AvuV0uCmEe-faP8EmgmOxg" kind="entryPoint"/>
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_AvuV0-CmEe-faP8EmgmOxg" kind="exitPoint"/>
+          <region xmi:type="uml:Region" xmi:id="_AvuV1OCmEe-faP8EmgmOxg" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV1eCmEe-faP8EmgmOxg" name="response" source="_AvuV4uCmEe-faP8EmgmOxg" target="_AvuV4OCmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV1uCmEe-faP8EmgmOxg" source="_AvuV4OCmEe-faP8EmgmOxg" target="_AvuV3-CmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV1-CmEe-faP8EmgmOxg" source="_AvuV4eCmEe-faP8EmgmOxg" target="_AvuV3-CmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV2OCmEe-faP8EmgmOxg" source="_AvuV3-CmEe-faP8EmgmOxg" target="_AvuV4-CmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV2eCmEe-faP8EmgmOxg" source="_AvuV3uCmEe-faP8EmgmOxg" target="_AvuV3-CmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV2uCmEe-faP8EmgmOxg" name="Shutdown" source="_AvuV0uCmEe-faP8EmgmOxg" target="_AvuV5uCmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV2-CmEe-faP8EmgmOxg" name="Start" source="_AvuV5eCmEe-faP8EmgmOxg" target="_AvuV0-CmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV3OCmEe-faP8EmgmOxg" source="_AvuV3-CmEe-faP8EmgmOxg" target="_AvuV4uCmEe-faP8EmgmOxg"/>
+            <transition xmi:type="uml:Transition" xmi:id="_AvuV3eCmEe-faP8EmgmOxg" name="response" source="_AvuV4-CmEe-faP8EmgmOxg" target="_AvuV4eCmEe-faP8EmgmOxg"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_AvuV3uCmEe-faP8EmgmOxg" name="Initial"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AvuV3-CmEe-faP8EmgmOxg" name="Stable"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AvuV4OCmEe-faP8EmgmOxg" name="Moving left"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AvuV4eCmEe-faP8EmgmOxg" name="Moving right"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AvuV4uCmEe-faP8EmgmOxg" name="Mass to the left"/>
+            <subvertex xmi:type="uml:State" xmi:id="_AvuV4-CmEe-faP8EmgmOxg" name="Mass to the right"/>
+          </region>
+        </packagedElement>
+        <packagedElement xmi:type="uml:StateMachine" xmi:id="_AvuV5OCmEe-faP8EmgmOxg" name="Off">
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_AvuV5eCmEe-faP8EmgmOxg" name="" kind="entryPoint"/>
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_AvuV5uCmEe-faP8EmgmOxg" kind="exitPoint"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pyjToN4tEe-_4MBFLfToQQ" name="sequence">
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_1atCgN4tEe-_4MBFLfToQQ" name="Interaction1">
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_brPlQN4uEe-_4MBFLfToQQ" name="pendulum angle sensor" coveredBy="_ySnBcN4zEe-_4MBFLfToQQ _W3pMAN4xEe-_4MBFLfToQQ _hx0vsN4zEe-_4MBFLfToQQ _cTtokN4wEe-_4MBFLfToQQ"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_027xoN4uEe-_4MBFLfToQQ" name="cart controler" coveredBy="_W3qaIN4xEe-_4MBFLfToQQ _878pkN4xEe-_4MBFLfToQQ _dKccQN4wEe-_4MBFLfToQQ"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_csz6gN4vEe-_4MBFLfToQQ" name="Operator" coveredBy="_FiZz8N4wEe-_4MBFLfToQQ _FiVigN4wEe-_4MBFLfToQQ _Cq8FUd41Ee-_4MBFLfToQQ _FibCEN4wEe-_4MBFLfToQQ"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_hBpMwN4vEe-_4MBFLfToQQ" name="Motor PID" coveredBy="_3jZF8N4wEe-_4MBFLfToQQ _879QoN4xEe-_4MBFLfToQQ _FS7ioN4yEe-_4MBFLfToQQ _xplkgN4xEe-_4MBFLfToQQ"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_1Pu2sN4vEe-_4MBFLfToQQ" name="Motor" coveredBy="_FS8JsN4yEe-_4MBFLfToQQ _yDTsEN4xEe-_4MBFLfToQQ"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_8_szEN4vEe-_4MBFLfToQQ" name="Shutdown" coveredBy="_hx0IoN4zEe-_4MBFLfToQQ _ySnogN4zEe-_4MBFLfToQQ _Cq8FUt41Ee-_4MBFLfToQQ _yZtZ4d4xEe-_4MBFLfToQQ _yZsLwN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_FiZz8N4wEe-_4MBFLfToQQ" name="ActionExecutionSpecification7Start" covered="_csz6gN4vEe-_4MBFLfToQQ" execution="_FiVigN4wEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_FiVigN4wEe-_4MBFLfToQQ" name="ActionExecutionSpecification7" covered="_csz6gN4vEe-_4MBFLfToQQ" finish="_FibCEN4wEe-_4MBFLfToQQ" start="_FiZz8N4wEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hx0IoN4zEe-_4MBFLfToQQ" name="Message21SendEvent" covered="_8_szEN4vEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_yZsLwN4xEe-_4MBFLfToQQ" name="ActionExecutionSpecification24" covered="_8_szEN4vEe-_4MBFLfToQQ" finish="_yZtZ4d4xEe-_4MBFLfToQQ" start="_hx0IoN4zEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ySnogN4zEe-_4MBFLfToQQ" name="Message20ReceiveEvent" covered="_8_szEN4vEe-_4MBFLfToQQ" message="_ySlMQN4zEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Cq8FUd41Ee-_4MBFLfToQQ" name="Message23SendEvent" covered="_csz6gN4vEe-_4MBFLfToQQ" message="_Cq8FUN41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Cq8FUt41Ee-_4MBFLfToQQ" name="Message23ReceiveEvent" covered="_8_szEN4vEe-_4MBFLfToQQ" message="_Cq8FUN41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_FibCEN4wEe-_4MBFLfToQQ" name="ActionExecutionSpecification7Finish" covered="_csz6gN4vEe-_4MBFLfToQQ" execution="_FiVigN4wEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_yZtZ4d4xEe-_4MBFLfToQQ" name="ActionExecutionSpecification24Finish" covered="_8_szEN4vEe-_4MBFLfToQQ" execution="_yZsLwN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:CombinedFragment" xmi:id="_SvT6IN4wEe-_4MBFLfToQQ" name="main loop" interactionOperator="loop">
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_Sv03gN4wEe-_4MBFLfToQQ" name="InteractionOperand0">
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ySnBcN4zEe-_4MBFLfToQQ" name="Message20SendEvent" covered="_brPlQN4uEe-_4MBFLfToQQ" message="_ySlMQN4zEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_cTtokN4wEe-_4MBFLfToQQ" name="ActionExecutionSpecification11" covered="_brPlQN4uEe-_4MBFLfToQQ" finish="_W3pMAN4xEe-_4MBFLfToQQ" start="_ySnBcN4zEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_W3pMAN4xEe-_4MBFLfToQQ" name="Message17SendEvent" covered="_brPlQN4uEe-_4MBFLfToQQ" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3jZF8N4wEe-_4MBFLfToQQ" name="Message11ReceiveEvent" covered="_hBpMwN4vEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_dKccQN4wEe-_4MBFLfToQQ" name="ActionExecutionSpecification11" covered="_027xoN4uEe-_4MBFLfToQQ" finish="_878pkN4xEe-_4MBFLfToQQ" start="_3jZF8N4wEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_W3qaIN4xEe-_4MBFLfToQQ" name="Message17ReceiveEvent" covered="_027xoN4uEe-_4MBFLfToQQ" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_878pkN4xEe-_4MBFLfToQQ" name="Message24SendEvent" covered="_027xoN4uEe-_4MBFLfToQQ" message="_8760YN4xEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_879QoN4xEe-_4MBFLfToQQ" name="Message24ReceiveEvent" covered="_hBpMwN4vEe-_4MBFLfToQQ" message="_8760YN4xEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_xplkgN4xEe-_4MBFLfToQQ" name="ActionExecutionSpecification19" covered="_hBpMwN4vEe-_4MBFLfToQQ" finish="_FS7ioN4yEe-_4MBFLfToQQ" start="_879QoN4xEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FS7ioN4yEe-_4MBFLfToQQ" name="Message25SendEvent" covered="_hBpMwN4vEe-_4MBFLfToQQ" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hx0vsN4zEe-_4MBFLfToQQ" name="Message21ReceiveEvent" covered="_brPlQN4uEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_yDTsEN4xEe-_4MBFLfToQQ" name="ActionExecutionSpecification22" covered="_1Pu2sN4vEe-_4MBFLfToQQ" finish="_Cq8FUd41Ee-_4MBFLfToQQ" start="_hx0vsN4zEe-_4MBFLfToQQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FS8JsN4yEe-_4MBFLfToQQ" name="Message25ReceiveEvent" covered="_1Pu2sN4vEe-_4MBFLfToQQ" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_Sv03gd4wEe-_4MBFLfToQQ" name="guard"/>
+          </operand>
+        </fragment>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8Qt41Ee-_4MBFLfToQQ" name="Message20SendEvent" message="_ySlMQN4zEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_IxP8Q941Ee-_4MBFLfToQQ" name="ActionExecutionSpecification11" finish="_IxP8Rt41Ee-_4MBFLfToQQ" start="_IxP8Qt41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8RN41Ee-_4MBFLfToQQ" name="Message21ReceiveEvent"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_IxP8Rd41Ee-_4MBFLfToQQ" name="ActionExecutionSpecification22" finish="_Cq8FUd41Ee-_4MBFLfToQQ" start="_IxP8RN41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8Rt41Ee-_4MBFLfToQQ" name="Message17SendEvent" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8R941Ee-_4MBFLfToQQ" name="Message17ReceiveEvent" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8SN41Ee-_4MBFLfToQQ" name="Message24SendEvent" message="_8760YN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8Sd41Ee-_4MBFLfToQQ" name="Message24ReceiveEvent" message="_8760YN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_IxP8St41Ee-_4MBFLfToQQ" name="ActionExecutionSpecification19" finish="_IxP8S941Ee-_4MBFLfToQQ" start="_IxP8Sd41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8S941Ee-_4MBFLfToQQ" name="Message25SendEvent" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IxP8TN41Ee-_4MBFLfToQQ" name="Message25ReceiveEvent" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6gt41Ee-_4MBFLfToQQ" name="Message20SendEvent" message="_ySlMQN4zEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_JYp6g941Ee-_4MBFLfToQQ" name="ActionExecutionSpecification11" finish="_JYp6ht41Ee-_4MBFLfToQQ" start="_JYp6gt41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6hN41Ee-_4MBFLfToQQ" name="Message21ReceiveEvent"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_JYp6hd41Ee-_4MBFLfToQQ" name="ActionExecutionSpecification22" finish="_Cq8FUd41Ee-_4MBFLfToQQ" start="_JYp6hN41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6ht41Ee-_4MBFLfToQQ" name="Message17SendEvent" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6h941Ee-_4MBFLfToQQ" name="Message17ReceiveEvent" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6iN41Ee-_4MBFLfToQQ" name="Message24SendEvent" message="_8760YN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6id41Ee-_4MBFLfToQQ" name="Message24ReceiveEvent" message="_8760YN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_JYp6it41Ee-_4MBFLfToQQ" name="ActionExecutionSpecification19" finish="_JYp6i941Ee-_4MBFLfToQQ" start="_JYp6id41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6i941Ee-_4MBFLfToQQ" name="Message25SendEvent" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JYp6jN41Ee-_4MBFLfToQQ" name="Message25ReceiveEvent" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEgt41Ee-_4MBFLfToQQ" name="Message20SendEvent" message="_ySlMQN4zEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_KZqEg941Ee-_4MBFLfToQQ" name="ActionExecutionSpecification11" finish="_KZqEht41Ee-_4MBFLfToQQ" start="_KZqEgt41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEhN41Ee-_4MBFLfToQQ" name="Message21ReceiveEvent"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_KZqEhd41Ee-_4MBFLfToQQ" name="ActionExecutionSpecification22" finish="_Cq8FUd41Ee-_4MBFLfToQQ" start="_KZqEhN41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEht41Ee-_4MBFLfToQQ" name="Message17SendEvent" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEh941Ee-_4MBFLfToQQ" name="Message17ReceiveEvent" message="_W3mIsN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEiN41Ee-_4MBFLfToQQ" name="Message24SendEvent" message="_8760YN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEid41Ee-_4MBFLfToQQ" name="Message24ReceiveEvent" message="_8760YN4xEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_KZqEit41Ee-_4MBFLfToQQ" name="ActionExecutionSpecification19" finish="_KZqEi941Ee-_4MBFLfToQQ" start="_KZqEid41Ee-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEi941Ee-_4MBFLfToQQ" name="Message25SendEvent" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KZqEjN41Ee-_4MBFLfToQQ" name="Message25ReceiveEvent" message="_FS5GYN4yEe-_4MBFLfToQQ"/>
+        <message xmi:type="uml:Message" xmi:id="_W3mIsN4xEe-_4MBFLfToQQ" name="angle" messageSort="asynchCall" receiveEvent="_W3qaIN4xEe-_4MBFLfToQQ" sendEvent="_W3pMAN4xEe-_4MBFLfToQQ"/>
+        <message xmi:type="uml:Message" xmi:id="_8760YN4xEe-_4MBFLfToQQ" name="desired velocity" messageSort="asynchCall" receiveEvent="_879QoN4xEe-_4MBFLfToQQ" sendEvent="_878pkN4xEe-_4MBFLfToQQ"/>
+        <message xmi:type="uml:Message" xmi:id="_FS5GYN4yEe-_4MBFLfToQQ" name="voltage" messageSort="asynchCall" receiveEvent="_FS8JsN4yEe-_4MBFLfToQQ" sendEvent="_FS7ioN4yEe-_4MBFLfToQQ"/>
+        <message xmi:type="uml:Message" xmi:id="_ySlMQN4zEe-_4MBFLfToQQ" name="if abs(angle) > 45°" receiveEvent="_ySnogN4zEe-_4MBFLfToQQ" sendEvent="_ySnBcN4zEe-_4MBFLfToQQ"/>
+        <message xmi:type="uml:Message" xmi:id="_VikvIN40Ee-_4MBFLfToQQ" name="Start"/>
+        <message xmi:type="uml:Message" xmi:id="_Cq8FUN41Ee-_4MBFLfToQQ" name="Manual Shutdown" receiveEvent="_Cq8FUt41Ee-_4MBFLfToQQ" sendEvent="_Cq8FUd41Ee-_4MBFLfToQQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_LzaBMOIQEe-WaLBO57JuWQ" name="Presentation2">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_LzaoQOIQEe-WaLBO57JuWQ">
+        <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_LzaoQeIQEe-WaLBO57JuWQ">
+        <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+      </packageImport>
+      <packagedElement xmi:type="uml:Package" xmi:id="_LzaoQuIQEe-WaLBO57JuWQ" name="requirements">
+        <packagedElement xmi:type="uml:Class" xmi:id="_LzaoQ-IQEe-WaLBO57JuWQ" name="REQ-000 Function Requirements">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoROIQEe-WaLBO57JuWQ" name="REQ-001 &#x9;Maintain Balance"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoReIQEe-WaLBO57JuWQ" name="REQ-002 External Disturbance Handling"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LzaoRuIQEe-WaLBO57JuWQ" name="REQ-010 Performance Requirements">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoR-IQEe-WaLBO57JuWQ" name="REQ-012 Steady-State Accuracy"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoSOIQEe-WaLBO57JuWQ" name="REQ-011 Settling Time"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LzaoSeIQEe-WaLBO57JuWQ" name="REQ-030 Safety &amp; Reliability Requirement">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoSuIQEe-WaLBO57JuWQ" name="REQ-031 Emergency Stop"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoS-IQEe-WaLBO57JuWQ" name="REQ-032 Safe Speed Limits"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LzaoTOIQEe-WaLBO57JuWQ" name="REQ-020 Non-Functional Requirements">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoTeIQEe-WaLBO57JuWQ" name="REQ-020 Kit Constraint"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LzaoTuIQEe-WaLBO57JuWQ" name="REQ-040 Structural Requirements">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoT-IQEe-WaLBO57JuWQ" name="REQ-041 Cart Design"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoUOIQEe-WaLBO57JuWQ" name="REQ-042 Sensor Mounting"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LzaoUeIQEe-WaLBO57JuWQ" name="REQ-050 Behavioral Requirements">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LzaoUuIQEe-WaLBO57JuWQ" name="REQ-051 Automatic Shut down"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_LzaoU-IQEe-WaLBO57JuWQ" name="Activity" node="_LzaoWOIQEe-WaLBO57JuWQ _LzaoWeIQEe-WaLBO57JuWQ _LzaoWuIQEe-WaLBO57JuWQ" group="_LzaoWuIQEe-WaLBO57JuWQ">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoVOIQEe-WaLBO57JuWQ" name=">45 degrees" target="_LzaoWeIQEe-WaLBO57JuWQ" source="_LzaoYuIQEe-WaLBO57JuWQ"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoVeIQEe-WaLBO57JuWQ" name="&lt;45 degrees" target="_LzaoY-IQEe-WaLBO57JuWQ" source="_LzaoYuIQEe-WaLBO57JuWQ"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoVuIQEe-WaLBO57JuWQ" name="Exceed limit" target="_LzaoWeIQEe-WaLBO57JuWQ" source="_LzaoY-IQEe-WaLBO57JuWQ"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoV-IQEe-WaLBO57JuWQ" target="_LzaoWuIQEe-WaLBO57JuWQ" source="_LzaoWOIQEe-WaLBO57JuWQ"/>
+        <structuredNode xmi:type="uml:LoopNode" xmi:id="_LzaoWuIQEe-WaLBO57JuWQ" name="Check speed limit" incoming="_LzaoV-IQEe-WaLBO57JuWQ">
+          <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoW-IQEe-WaLBO57JuWQ" target="_LzaoYeIQEe-WaLBO57JuWQ" source="_LzaoYOIQEe-WaLBO57JuWQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoXOIQEe-WaLBO57JuWQ" target="_LzaoX-IQEe-WaLBO57JuWQ" source="_LzaoYeIQEe-WaLBO57JuWQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoXeIQEe-WaLBO57JuWQ" target="_LzaoYuIQEe-WaLBO57JuWQ" source="_LzaoX-IQEe-WaLBO57JuWQ"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_LzaoXuIQEe-WaLBO57JuWQ" name="Within limit" target="_LzaoYOIQEe-WaLBO57JuWQ" source="_LzaoY-IQEe-WaLBO57JuWQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_LzaoX-IQEe-WaLBO57JuWQ" name="Move cart" incoming="_LzaoXOIQEe-WaLBO57JuWQ" outgoing="_LzaoXeIQEe-WaLBO57JuWQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_LzaoYOIQEe-WaLBO57JuWQ" name="Read sensor data" incoming="_LzaoXuIQEe-WaLBO57JuWQ" outgoing="_LzaoW-IQEe-WaLBO57JuWQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_LzaoYeIQEe-WaLBO57JuWQ" name="Compute Control" incoming="_LzaoW-IQEe-WaLBO57JuWQ" outgoing="_LzaoXOIQEe-WaLBO57JuWQ"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_LzaoYuIQEe-WaLBO57JuWQ" name="Check Angle" incoming="_LzaoXeIQEe-WaLBO57JuWQ" outgoing="_LzaoVOIQEe-WaLBO57JuWQ _LzaoVeIQEe-WaLBO57JuWQ"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_LzaoY-IQEe-WaLBO57JuWQ" name="Check Speed Limit" incoming="_LzaoVeIQEe-WaLBO57JuWQ" outgoing="_LzaoXuIQEe-WaLBO57JuWQ _LzaoVuIQEe-WaLBO57JuWQ"/>
+        </structuredNode>
+        <node xmi:type="uml:InitialNode" xmi:id="_LzaoWOIQEe-WaLBO57JuWQ" name="Start" outgoing="_LzaoV-IQEe-WaLBO57JuWQ"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_LzaoWeIQEe-WaLBO57JuWQ" name="End" incoming="_LzaoVOIQEe-WaLBO57JuWQ _LzaoVuIQEe-WaLBO57JuWQ"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaoZOIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzaoZeIQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaoZuIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzaoZ-IQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaoaOIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzaoaeIQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaoauIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lzaoa-IQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaobOIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzaobeIQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaobuIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lzaob-IQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaocOIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzaoceIQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaocuIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lzaoc-IQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaodOIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzaodeIQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LzaoduIQEe-WaLBO57JuWQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lzaod-IQEe-WaLBO57JuWQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+      </profileApplication>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hK_bQN1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hLB3gN1ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hP8zwN1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hP-B4N1ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeIN1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeId1ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeIt1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeI91ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeJN1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeJd1ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeJt1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeJ91ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeKN1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeKd1ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeKt1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeK91ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeLN1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeLd1ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_hQAeLt1ZEe-ijvR8GGXNUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hQAeL91ZEe-ijvR8GGXNUw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_LzpRwOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoQ-IQEe-WaLBO57JuWQ" id="REQ-000" text="&#xD;&#xA;" base_Class="_LzaoQ-IQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0JoEOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoROIQEe-WaLBO57JuWQ" id="REQ-001" text="The system must stabilize the pendulum in an upright position." base_Class="_LzaoROIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0K2MOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoReIQEe-WaLBO57JuWQ" id="REQ-002" text="The system must reject external forces applied to the cart." base_Class="_LzaoReIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0NScOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoRuIQEe-WaLBO57JuWQ" id="REQ-010" base_Class="_LzaoRuIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0OgkOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoR-IQEe-WaLBO57JuWQ" id="REQ-012" text="The pendulum angle deviation must be less than 0.5 degrees after settling." base_Class="_LzaoR-IQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0QVwOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoSOIQEe-WaLBO57JuWQ" id="REQ-011" text="The system must stabilize the pendulum within 2 seconds after a disturbance." base_Class="_LzaoSOIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0Rj4OIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoSeIQEe-WaLBO57JuWQ" id="REQ-030" base_Class="_LzaoSeIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0SyAOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoSuIQEe-WaLBO57JuWQ" id="REQ-031" text="The system must have a stop mechanism to prevent damage if instability is detected." base_Class="_LzaoSuIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0UAIOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoS-IQEe-WaLBO57JuWQ" id="REQ-032" text="The cart should not exceed a speed of 10 m/s to prevent damage." base_Class="_LzaoS-IQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0UnMOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoTOIQEe-WaLBO57JuWQ" id="REQ-020" base_Class="_LzaoTOIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0V1UOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoTeIQEe-WaLBO57JuWQ" id="REQ-021" text="The system must use an ELEGOO kit." base_Class="_LzaoTeIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0WcYOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoTuIQEe-WaLBO57JuWQ" id="REQ-040" base_Class="_LzaoTuIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0XDcOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoT-IQEe-WaLBO57JuWQ" id="REQ-041" text="The cart must be lightweight and solid." base_Class="_LzaoT-IQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0XqgOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoUOIQEe-WaLBO57JuWQ" id="REQ-042" text="The sensors must be securely mounted to minimize vibration." base_Class="_LzaoUOIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0Y4oOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoUeIQEe-WaLBO57JuWQ" id="REQ-050" base_Class="_LzaoUeIQEe-WaLBO57JuWQ"/>
+  <Requirements:Requirement xmi:id="_L0aGwOIQEe-WaLBO57JuWQ" base_NamedElement="_LzaoUuIQEe-WaLBO57JuWQ" id="REQ-051" text="The cart should automatically shut down when safety limit is reached." base_Class="_LzaoUuIQEe-WaLBO57JuWQ"/>
+</xmi:XMI>
