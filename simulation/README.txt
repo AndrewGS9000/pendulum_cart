@@ -6,3 +6,11 @@ Instructions:
 There are 3 different folders for our 3 different controllers: PID, LQR, and feedback linearization.
 
 To run the code, open the folder of the controller you would like to run, and run the "simulator.py" file. (example: to run the PID controller, run "pid/simulator.py"). 
+
+Requirements:
+- python 3.11.10
+- Visual Studio Code (or another IDE for python)
+libraries:
+- numpy
+- matplotlib
+- scipy
