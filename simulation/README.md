@@ -6,7 +6,7 @@
   - LQR with non-linear component
   - Pole placement
 - **real time animation**
-- **real time plot**
+- **real time plots**
 
 ## How to run:
 There is a single python file in this folder containing all of our code for the simulation of the cart.
