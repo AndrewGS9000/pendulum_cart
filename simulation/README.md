@@ -2,9 +2,9 @@
 
 ## features
 - **controllers supported:**
-- PID
-- LQR with non-linear component
-- Pole placement
+  - PID
+  - LQR with non-linear component
+  - Pole placement
 - **real time animation**
 - **real time plot**
 
