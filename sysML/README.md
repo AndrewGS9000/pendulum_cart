@@ -20,4 +20,4 @@ Open one of the 4 ".di" files using papyrus to see the diagrams.
 - "sys_eng_project1.di" -> Use case diagram + State machine diagram + Sequence diagram
 
 ## Requirements
-- papyrus
+- `Papyrus`
