@@ -1,7 +1,7 @@
 # sysML diagrams
 
 ## Features
--**All 9 types of sysML diagrams:**
+**All 9 types of sysML diagrams:**
   - Activity diagram
   - Block definition diagram
   - Internal block diagram
