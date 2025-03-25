@@ -1,11 +1,11 @@
-COMP0216: Systems Engineering for Real-time Systems, Milestone D, team 7, 3/2025
-
+Simulation code
 
 Instructions:
 
-There are 3 different folders for our 3 different controllers: PID, LQR, and feedback linearization.
+There is a single python file in this folder containing all of our code for the simulation of the cart.
 
-To run the code, open the folder of the controller you would like to run, and run the "simulator.py" file. (example: to run the PID controller, run "pid/simulator.py"). 
+The code supports 3 different kinds of controllers: PID, non-linear, and pole placement. The code only runs one controller at once. To choose which controller is running, go to line 237 of code ( controller = HybridController(system, control_mode='non_linear', dt=dt, use_nonlinear_comp=True) ) and replace parameter "control_mode=" with your desired controller: 'non_linear' for non-linear, 'pid' for pid and 'pole' for pole placement.
+
 Depending on the controller and computer used, the file may take a moment to run.
 
 Requirements:
