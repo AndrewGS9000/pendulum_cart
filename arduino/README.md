@@ -1,4 +1,4 @@
-#Arduino code
+# Arduino code
 
 This folder contains all code used on the Arduino for our project.
 
