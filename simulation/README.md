@@ -1,25 +1,33 @@
-# Simulation code
+# Pendulum-Cart Simulation with GUI
 
-## features
-- **controllers supported:**
-  - PID
-  - LQR with non-linear component
-  - Pole placement
-- **real time animation**
-- **real time plots**
+This project simulates and visualizes an **inverted pendulum on a cart** system using various control strategies. It provides a simple **GUI (Graphical User Interface)** to select controller parameters, enable/disable noise, and run the simulation with animation and plots.
 
-## How to run:
-There is a single python file in this folder containing all of our code for the simulation of the cart.
 
-The code supports 3 different kinds of controllers: PID, non-linear, and pole placement. The code only runs one controller at once. To choose which controller is running, go to line 237 of code ( controller = HybridController(system, control_mode='non_linear', dt=dt, use_nonlinear_comp=True) ) and replace parameter "control_mode=" with your desired controller: 'non_linear' for non-linear, 'pid' for pid and 'pole' for pole placement.
+## How to Run
+ - just run the file YAN_simulation_final.py
+ - adjust parameters and options in the GUI
 
-Depending on the controller and computer used, the file may take a moment to run.
+## Features
 
-## Requirements:
-- python 3.11.10
-- Visual Studio Code (or another IDE for python)
+- **Controllers Supported:**
+  - PID Controller
+  - Linear LQR with Non-linear Compensation
+  - Pole Placement Controller
+- **Real-time Animation** of the pendulum-cart system.
+- **Noise Option** to simulate realistic measurement disturbances.
+- **GUI** for easy interaction and parameter tuning.
 
-libraries:
-- numpy v1.26.4
-- matplotlib v3.9.1
-- scipy v1.14.1
+---
+
+## Requirements
+
+- Python 3.7+
+- `numpy`
+- `matplotlib`
+- `scipy`
+- `tkinter` (usually included with Python)
+
+To install required packages:
+
+```bash
+pip install numpy matplotlib scipy
